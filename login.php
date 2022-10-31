@@ -3,7 +3,7 @@ require("db.php");
 $a = "";
 if(isset($_POST['uname']) && isset($_POST['pass'])){
   $uname = $_POST['uname'];
-  $pass = $_POST['pass'];
+  $pass = md5($_POST['pass']);
   if($uname == "" || $pass == ""){
     $a = "Fill all data";
   } else {
